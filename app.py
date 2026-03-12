@@ -7,12 +7,12 @@ df = pd.read_csv('Tabla_A17_Aire1.csv')
 # --- TRADUCTOR UNICODE ---
 # Usamos caracteres especiales (como ᵣ y °) que Streamlit y las tablas sí entienden nativamente.
 nombres_bonitos = {
-    df.columns[0]: "Temperatura T (K)",
-    df.columns[1]: "Entalpía h (kJ/kg)",
-    df.columns[2]: "Presión relativa Pᵣ",
-    df.columns[3]: "Energía interna u (kJ/kg)",
-    df.columns[4]: "Volumen relativo vᵣ",
-    df.columns[5]: "Entropía s° (kJ/kg·K)"
+    df.columns[0]: "T (K) | Temperatura",
+    df.columns[1]: "h (kJ/kg) | Entalpía",
+    df.columns[2]: "Pᵣ | Presión relativa",
+    df.columns[3]: "u (kJ/kg) | Energía interna",
+    df.columns[4]: "vᵣ | Volumen relativo",
+    df.columns[5]: "s° (kJ/kg·K) | Entropía"
 }
 
 st.title("Calculadora de Propiedades: Aire (Tabla A-17)")
