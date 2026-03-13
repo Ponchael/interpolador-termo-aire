@@ -1,26 +1,26 @@
 [theme]
 
 # Color de los botones y acentos
-primaryColor = "#8B3A3A"
+#primaryColor = "#8B3A3A"
 
 # Fondo principal
-backgroundColor = "#F6F1E9"
+#backgroundColor = "#F6F1E9"
 
 # Fondo de las cajas de texto y menús
-secondaryBackgroundColor = "#EAE0D5"
+#secondaryBackgroundColor = "#EAE0D5"
 
 # Color del texto
-textColor = "#2d2824"
+#textColor = "#2d2824"
 
 # Tipografía
-font = "sans serif"
+#font = "sans serif"
 
 
 # ¡¡¡ Paleta Alternativa !!!
 
-#[theme]
-#primaryColor = "#48CAE4"
-#backgroundColor = "#0B3954"
-#secondaryBackgroundColor = "#125175"
-#textColor = "#F8F9FA"
-#font = "sans serif"
+[theme]
+primaryColor = "#48CAE4"
+backgroundColor = "#0B3954"
+secondaryBackgroundColor = "#125175"
+textColor = "#F8F9FA"
+font = "sans serif"

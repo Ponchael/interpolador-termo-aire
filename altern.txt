@@ -1,0 +1,41 @@
+# Archivo: app.py
+import streamlit as st
+import idiomas
+from vistas import t_a4, t_a5, t_a6, t_a11, t_a12, t_a13, t_a17 
+
+st.set_page_config(page_title="Fisikka", layout="wide")
+
+# ==========================================
+# SELECTOR DE IDIOMA
+# ==========================================
+col_vacia, col_idioma = st.columns([8, 2])
+with col_idioma:
+    idioma_seleccionado = st.selectbox("🌐 Language", ["Español", "English", "Français"], label_visibility="collapsed")
+
+t = idiomas.textos[idioma_seleccionado]
+st.title(t["titulo"])
+
+# ==========================================
+# MENÚ LATERAL (Navegación)
+# ==========================================
+st.sidebar.header("Tablas Termodinámicas")
+opciones_menu = list(t["menu_nombres"].values())
+tabla_elegida = st.sidebar.radio("Selecciona una tabla:", opciones_menu)
+
+# ==========================================
+# ENRUTADOR (Dibuja la vista elegida)
+# ==========================================
+if tabla_elegida == t["menu_nombres"]["a4"]:
+    t_a4.mostrar(t)
+elif tabla_elegida == t["menu_nombres"]["a5"]:
+    t_a5.mostrar(t)
+elif tabla_elegida == t["menu_nombres"]["a6"]:
+    t_a6.mostrar(t)
+elif tabla_elegida == t["menu_nombres"]["a11"]:
+    t_a11.mostrar(t)
+elif tabla_elegida == t["menu_nombres"]["a12"]:
+    t_a12.mostrar(t)
+elif tabla_elegida == t["menu_nombres"]["a13"]:
+    t_a13.mostrar(t)
+elif tabla_elegida == t["menu_nombres"]["a17"]:
+    t_a17.mostrar(t)
